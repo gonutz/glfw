@@ -230,7 +230,7 @@ int _glfwInitJoysticks(void)
 
         while ((entry = readdir(dir)))
         {
-            char path[20];
+            char path[12+255];
             regmatch_t match;
 
             if (regexec(&_glfw.linux_js.regex, entry->d_name, 1, &match, 0) != 0)
